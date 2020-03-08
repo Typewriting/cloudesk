@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC:=gcc$/;"	m
+CC	test/makefile	/^CC:=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS:=-g -Wall$/;"	m
+Compute_file_md5	md5.c	/^int Compute_file_md5(const char *file_path, char *md5_str)$/;"	f
+ELF	Makefile	/^ELF:=server$/;"	m
+ELFS	test/makefile	/^ELFS:=$(SRCS:%.c=%)$/;"	m
+MD5Decode	md5.c	/^void MD5Decode(unsigned int *output, unsigned char *input, unsigned int len)$/;"	f
+MD5Encode	md5.c	/^void MD5Encode(unsigned char *output,unsigned int *input,unsigned int len)$/;"	f
+MD5Final	md5.c	/^void MD5Final(MD5_CTX *context, unsigned char digest[16])$/;"	f
+MD5Init	md5.c	/^void MD5Init(MD5_CTX *context)$/;"	f
+MD5Transform	md5.c	/^void MD5Transform(unsigned int state[4], unsigned char block[64])$/;"	f
+MD5Update	md5.c	/^void MD5Update(MD5_CTX *context, unsigned char *input, unsigned int inputlen)$/;"	f
+OBJS	Makefile	/^OBJS:=$(patsubst %.c,%.o,$(SRCS))$/;"	m
+PADDING	md5.c	/^unsigned char PADDING[] =$/;"	v
+SRCS	Makefile	/^SRCS:=$(wildcard *.c)$/;"	m
+SRCS	test/makefile	/^SRCS:=$(wildcard *.c)$/;"	m
+TRAINSIZE	recv_cmd.c	4;"	d	file:
+analyse_cmd	recv_cmd.c	/^int analyse_cmd(int cmd_tag,int newFd, MYSQL* pmysql, int* puserid, int *pcode, char* uname, FILE* fp_log)$/;"	f
+download	download.c	/^int download(int socketFd, long int *size)$/;"	f
+factory_init	factory.c	/^int factory_init(pFactory_t p,int threadNum,int queCapacity, MYSQL* pmysql, FILE* fp_log)$/;"	f
+factory_start	factory.c	/^int factory_start(pFactory_t p)$/;"	f
+get_cd	recv_cmd.c	/^int get_cd(int newFd, int userid, int* pcode, MYSQL* pmysql, char uanme, FILE* fp_log)$/;"	f
+get_gets	recv_cmd.c	/^int get_gets(int newFd, int userid, char uanme, MYSQL* pmysql)$/;"	f
+get_login	recv_cmd.c	/^int get_login(int newFd, MYSQL* pmysql, char uanme, FILE* fp_log)$/;"	f
+get_ls	recv_cmd.c	/^int get_ls(int newFd, int userid, int code, char uanme, MYSQL* pmysql)$/;"	f
+get_puts	recv_cmd.c	/^int get_puts(int newFd, int userid, int code, char uanme, MYSQL* pmysql)$/;"	f
+get_reg	recv_cmd.c	/^int get_reg(int newFd, MYSQL* pmysql, char uanme, FILE* fp_log)$/;"	f
+get_remove	recv_cmd.c	/^int get_remove(int newFd, int userid, char uanme, MYSQL* pmysql)$/;"	f
+main	main.c	/^int main(int argc,char *argv[])$/;"	f
+main	test/main.c	/^int main(int argc, char *argv[])$/;"	f
+que_get	work_que.c	/^int que_get(pQue_t pq,pNode_t *pTask)$/;"	f
+que_init	work_que.c	/^int que_init(pQue_t pq,int Capacity)$/;"	f
+que_set	work_que.c	/^int que_set(pQue_t pq,pNode_t pNew)$/;"	f
+recvCmd	recv_cmd.c	/^int recvCmd(int newFd, MYSQL* pmysql, FILE* fp_log)$/;"	f
+recvCmd_tag	recv_cmd.c	/^int recvCmd_tag(int newFd)$/;"	f
+recvCycle	download.c	/^int recvCycle(int socketFd, void *pStart, int len)$/;"	f
+sigFunc	trans_file.c	/^void sigFunc(int signum)$/;"	f
+sql_cmp_cipher	sql_operate.c	/^int sql_cmp_cipher(MYSQL* pmysql, char* uname, char* cipher)$/;"	f
+sql_gets	sql_operate.c	/^int sql_gets(MYSQL* pmysql, int userid, char* fname, char* md5)$/;"	f
+sql_insert_gets	sql_operate.c	/^int sql_insert_gets(MYSQL *pmysql, int userid, char* fname, int code, long int size, char* md5)$/;"	f
+sql_insert_reg	sql_operate.c	/^int sql_insert_reg(MYSQL* pmysql, train_reg t_reg)$/;"	f
+sql_login	sql_operate.c	/^int sql_login(MYSQL* pmysql){$/;"	f
+sql_query_cd	sql_operate.c	/^int sql_query_cd(MYSQL* pmysql, int userid, char* cd_path, int* pcode)$/;"	f
+sql_query_cd_pre	sql_operate.c	/^int sql_query_cd_pre(MYSQL* pmysql, int code)$/;"	f
+sql_query_fname	sql_operate.c	/^int  sql_query_fname(MYSQL* pmysql, char* fname)$/;"	f
+sql_query_ls	sql_operate.c	/^int sql_query_ls(MYSQL*pmysql, int userid, int code, char* files)$/;"	f
+sql_query_salt	sql_operate.c	/^int sql_query_salt(MYSQL* pmysql, char* uname, char* salt)$/;"	f
+sql_remove	sql_operate.c	/^int sql_remove(MYSQL* pmysql, char* fname, int userid)$/;"	f
+tcp_init	tcp_init.c	/^int tcp_init(int *socketFd,char *ip,char *port)$/;"	f
+threadFunc	factory.c	/^void* threadFunc(void *p)$/;"	f
+trans_file	trans_file.c	/^int trans_file(int newFd, char* fname)$/;"	f

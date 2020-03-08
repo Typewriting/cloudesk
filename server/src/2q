@@ -1,0 +1,40 @@
+#ifndef __DESKSERVER_H__
+#define __DESKSERVER_H__
+
+#include "factory.h"
+#define TRAINSIZE 200
+#define FNAME_LEN 15
+
+//客户端注册时传送的结构体：
+typedef struct{
+    char uname[16];
+    char salt[12];
+    char cipher[100];
+}train_reg;
+
+//接收并分析客户端的指令
+int recvCmd_train(int newFd, void * pStart);
+int recvCmd_tag(int newFd);
+int analyse_cmd(int, int,MYSQL*, int*, int*);
+int get_cd(int, int, int*, MYSQL*);
+int get_ls(int socketFd, int userid, int code,MYSQL* pmysql);
+int get_gets(int, int, MYSQL*);
+int get_puts(int newFd, int userid, MYSQL* pmysql);
+int get_login(int, MYSQL*); 
+int get_reg(int, MYSQL*); 
+int trans_file(int, char*);
+int recvCycle(int newFd,void *pStart,int len);
+int download(int socketFd);
+
+//数据库操作
+int sql_query_cd(MYSQL* pmysql, int userid, char* cd_path, int* pcode);
+int sql_query_cd_pre(MYSQL* pmysql, int pcode);
+int sql_query_ls(MYSQL*pmysql, int userid, int code, char*);
+int sql_gets(MYSQL*pmysql, int userid, char*,char*);
+int sql_login(MYSQL*);
+int sql_insert_reg(MYSQL* pmysql, train_reg t_reg);
+int sql_query_salt(MYSQL* pmysql, char* uname, char* salt);
+int sql_cmp_cipher(MYSQL* pmysql, char* uname, char* cipher);
+int sql_query_fname(MYSQL* pmysql, char* fname);
+
+#endif
