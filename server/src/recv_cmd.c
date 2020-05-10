@@ -6,7 +6,7 @@
 int recvCmd(int newFd, MYSQL* pmysql, FILE* fp_log)
 {
     int fid = sql_max_fid(pmysql);
-printf("fid = %d\n", fid);
+//printf("fid = %d\n", fid);
     int userid = -1;
     int code = 1;
     char uname[16] = {0};
