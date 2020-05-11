@@ -21,8 +21,6 @@
 
 客户端在本地将指令转换成操作码，同时过滤无效操作，将操作码发送至服务器端，服务器端接收后，执行相应的操作。
 
-
-
 ## 工作描述：
 
 ### 利用socket编程实现服务器和客户端的通信； 
@@ -31,7 +29,7 @@ socket：套接口。是操作系统内核中的一个数据结构，它是网�
 
 通过socket编程实现TCP协议流程：
 
-服务端：socket---bind---listen---while(1){---accept---recv---send---close---}---close
+服务端：socket---bind---listen---while(1){--accept----recv---send---close---}---close
 
 客户端：socket------------------------------connect---send---recv---------------close
 
